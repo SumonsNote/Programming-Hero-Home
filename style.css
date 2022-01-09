@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono&family=Poppins:wght@100;200;300;400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'JetBrains Mono', monospace;
+    background: black;
+    color: white;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.banner {
+    display: flex;
+    height: 100vh;
+}
+.banner-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner-title {
+    font-size: 60px;
+    position: relative;
+    white-space: nowrap;
+    color: transparent;
+}
+.banner-title::before {
+    content: "Progrmming Hero";
+    top: 0;
+    left: 0;
+    position: absolute;
+    color: #3777d8;
+    animation: typing 3s linear infinite;
+}
+.header-text {
+    font-size: 15px;
+    text-align: justify;
+    line-height: 3;
+}
+.love-button {
+    padding: 15px 20px;
+    border: 5px solid #3777d8;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    background-color: #3777d8;
+    color: white;
+    cursor: pointer;
+}
+.love-button:hover {
+    background-color: transparent;
+    color: white;
+    transition: .3s linear;
+}
+.banner-right img {
+    border: 5px solid #3777d8;
+}
+.section-title {
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.section-title h1 {
+    border-left: 4px solid #3777d8;
+    border-right: 4px solid #3777d8;
+    margin: 50px 0;
+    display: inline-block;
+    padding: 0 10px;
+    color: #3777d8;
+}
+.photo {
+    width: 280px;
+    height: 280px;
+    position: relative;
+    overflow: hidden;
+}
+.photo img {
+    width: 100%;
+    height: 100%;
+}
+.border {
+    background-color: white;
+    position: absolute;
+    transition: .7s ease-in-out;
+}
+.border.top, .border.bottom{
+    height: 4px;
+    width: 270px;
+}
+.border.left, .border.right{
+    height: 270px;
+    width: 4px;
+}
+.border.top{
+    top: 5px;
+    right: 100%;
+}
+.border.bottom{
+    bottom: 5px;
+    left: 100%;
+}
+.border.left{
+    left: 5px;
+    top: 100%;
+}
+.border.right{
+    right: 5px;
+    bottom: 100%;
+}
+.photo:hover .border.top {
+    right: 5px;
+}
+.photo:hover .border.bottom{
+    left: 5px;
+}
+.photo:hover .border.left {
+    top: 5px;
+}
+.photo:hover .border.right {
+    bottom: 5px;
+}
+.photo-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: white;
+    padding-left: 30px;
+    bottom: 0;
+    left: 0;
+    transform: translateY(400px);
+    transition: .3s ease-out;
+}
+.photo:hover .photo-content {
+    transform: translateY(200px);
+}
+.photo::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    top: 0;
+    left: 0;
+    transition: .3s linear;
+}
+.photo:hover::before {
+    opacity: 1;
+}
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.photo-gallery, .photo {
+    margin: 5px;
+}
+footer {
+    text-align: center;
+    padding: 30px;
+    font-size: 20px;
+}
+@keyframes typing {
+    0% {content: 'P|';}
+    2% {content: 'Pr|';}
+    4% {content: 'Pro|';}
+    6% {content: 'Prog|';}
+    8% {content: 'Progr|';}
+    10% {content: 'Progra|';}
+    12% {content: 'Program|';}
+    14% {content: 'Programm|';}
+    16% {content: 'Programmi|';}
+    18% {content: 'Programmin|';}
+    20% {content: 'Programming|';}
+    22% {content: 'Programming |';}
+    24% {content: 'Programming H|';}
+    26% {content: 'Programming He|';}
+    28% {content: 'Programming Her|';}
+    30% {content: 'Programming Hero|';}
+    33% {content: 'Programming Hero|';}
+    34% {content: 'Programming Her|';}
+    35% {content: 'Programming He|';}
+    36% {content: 'Programming H|';}
+    37% {content: 'Programming |';}
+    38% {content: 'Programming|';}
+    39% {content: 'Programmin|';}
+    40% {content: 'Programmi|';}
+    41% {content: 'Programm|';}
+    42% {content: 'Program|';}   
+    43% {content: 'Progra|';}
+    44% {content: 'Progr|';}
+    45% {content: 'Prog|';}
+    46% {content: 'Pro|';}
+    47% {content: 'Pr|';}
+    48% {content: 'P|';}
+    49% {content: '|';}
+    50% {content: '|';}
+}
